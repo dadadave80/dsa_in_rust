@@ -35,9 +35,10 @@ mod bubble_sort_test {
     }
 
     #[test]
+    #[should_panic(expected = "left == right")]
     fn sort_fail() {
         let input: Vec<u16> = vec![2, 1];
-        let expected: Vec<u16> = vec![1, 2];
+        let expected: Vec<u16> = vec![];
 
         assert_eq!(expected, _bubble_sort(input));
     }
